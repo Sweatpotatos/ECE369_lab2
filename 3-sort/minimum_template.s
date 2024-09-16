@@ -102,10 +102,24 @@ done:
 .globl MaxIndex
 
 MaxIndex:   
-    # Please fill in your implementation for 'MaxIndex' below this line !##########################
-    # Your code begins
+    lw      $t0, 0($a0)     # max=V[0]
+    addi    $t1,$0, 1       # i=1
+    add     $t3,$0, 0       # max_index=0
 
-    # Your code ends
+loop_max:
+    bge     $t1, $a1, done_max  # if i >= n, break loop
+    mul     $t2, $t1, 4     # $t2 = $t1 * 4
+    add     $t2,$t2,$a0     # $t2 = address of V[i]
+    lw      $t2, 0($t2)     # $t2 = V[i]
+    ble     $t2, $t0, next_max  # if V[i] <= max, continue
+    add     $t0,$t2,$0      # max=V[i]
+    add     $t3,$t1,$0      # max_index=i
+next_max:
+    addi    $t1,$t1,1       # i++
+    j       loop            # Loop back
+done_max: 
+    add     $v0,$t3,$0      # return max_index
+    jr      $ra
 
     
 #################### Sort function that sorts and prints the sorted array ##########################
@@ -173,8 +187,8 @@ test:
     addi    $sp, $sp, -4        # Make space on stack
     sw      $ra, 0($sp)         # Save return address
 
-    jal    minimum             # call 'minimum' function
-#    jal    MaxIndex            # call 'MaxIndex' function
+#    jal    minimum             # call 'minimum' function
+    jal    MaxIndex            # call 'MaxIndex' function
     jal    print_integer       # Jump to the routine that prints the index
    
 # Comment out minimum, MaxIndex and print_integer function calls and uncomment sort and 
