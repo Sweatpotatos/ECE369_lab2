@@ -1,7 +1,7 @@
 # Exercise 2
 #  Max Score: 9 points
 #
-# Students: Yaolei Bian, Allen Leinberger, Muhammud
+# Students: Yaolei Bian, Allen Leinberger, Mohammed Alrkhayes
 #
 # 'count_occurence.a' - count the occurrences of a specific character in string 
 # "str". Indexed addressing is used to access the array elements.
