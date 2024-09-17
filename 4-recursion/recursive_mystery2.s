@@ -48,12 +48,12 @@ main:	addi	$sp, $sp, -4	# Make space on stack
 	li	$a0, 8
       li    $a2, 5		
 	jal	test		
-# What is the value of $v0 at this point? (v0)= _ _ _ _ _ _ _ _        #
+# What is the value of $v0 at this point? (v0)= _ _ _ _ _ _ _ _        #25
 	la	$a1, list1	
 	li	$a0, 13		
 	jal	test		
-# What is the value of $v0 at this point?	(v0) = _ _ _ _ _ _ _ _       #
-# What does this code compute? Your answer HERE: _ _ _ _ _ _ _ _ _ _ _ _ #
+# What is the value of $v0 at this point?	(v0) = _ _ _ _ _ _ _ _       #20
+# What does this code compute? Your answer HERE: _ _ _ _ _ _ _ _ _ _ _ _ # sum of all elements greater than or equal to 5 in each list (list1 and list2), starting from a specified index
 
 return:	
 li	$v0, 0		# Return value
