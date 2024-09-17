@@ -40,9 +40,5 @@ li	$v0, 0			# Return value
 	jr 	$ra			# Return
 # Step through this code in your simulator and monitor the register values. 
 # What does the tomato function do?   
-# Write your answer HERE_ _ _ _ _ _ _ _ _   
-#Answer:
-#The tomato function recursively sums the first 9 elements of the array list1 (from list1[8] to list1[0]). 
-#It starts with an index of 9 (which accesses list1[8] due to 0-based indexing) and continues recursively until the base case ($a0 == 0) is reached, summing all the elements along the way.
-#The final sum is stored in $v0 and returned to the caller.
+# Write your answer HERE_ _ _ _ _ _ _ _ _  #The tomato function recursively sums the first 9 elements of the array list1 (from list1[8] to list1[0]). It starts with an index of 9 (which accesses list1[8] due to 0-based indexing) and continues recursively until the base case ($a0 == 0) is reached, summing all the elements along the way. The final sum is stored in $v0 and returned to the caller.
          
