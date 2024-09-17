@@ -76,52 +76,7 @@ space:      .asciiz     " "
 
 
 
-############################# Main function, your MIPS program starts here! ######################$
-.text
-.globl main
-main:   
-    addi    $sp, $sp, -4    # Make space on stack
-    sw      $ra, 0($sp)     # Save return address
 
-    la      $a0, list0      # 1st parameter: address of list[0]
-    la      $a1, len0       # load address of 'len#'
-    lw      $a1, 0($a1)
-    jal     test            # call function
-
-    la      $a0, list1      # 1st parameter: address of list[0]
-    la      $a1, len1       # load address of 'len#'
-    lw      $a1, 0($a1)
-    jal     test            # call function
-
-    la      $a0, list2      # 1st parameter: address of list[0]
-    la      $a1, len2       # load address of 'len#'
-    lw      $a1, 0($a1)
-    jal     test            # call function
-
-    la      $a0, list3      # 1st parameter: address of list[0]
-    la      $a1, len3       # load address of 'len#'
-    lw      $a1, 0($a1)
-    jal     test            # call function
-
-    la      $a0, list4      # 1st parameter: address of list[0]
-    la      $a1, len4       # load address of 'len#'
-    lw      $a1, 0($a1)
-    jal     test            # call function
-
-    la      $a0, list5      # 1st parameter: address of list[0]
-    la      $a1, len5       # load address of 'len#'
-    lw      $a1, 0($a1)
-    jal     test            # call function
-
-return:	
-    li      $v0, 0          # Return value
-    lw      $ra, 0($sp)     # Restore return address
-    addi    $sp, $sp, 4    # Restore stack pointer
-    jr      $ra
-    
-    
-    
-    
 ################# minimum routine that prints the index of the min element in an array ############
 .text
 .globl minimum
@@ -327,4 +282,49 @@ print_return:
     jr      $ra
 
     # Return
+############################# Main function, your MIPS program starts here! ######################$
+.text
+.globl main
+main:   
+    addi    $sp, $sp, -4    # Make space on stack
+    sw      $ra, 0($sp)     # Save return address
 
+    la      $a0, list0      # 1st parameter: address of list[0]
+    la      $a1, len0       # load address of 'len#'
+    lw      $a1, 0($a1)
+    jal     test            # call function
+
+    la      $a0, list1      # 1st parameter: address of list[0]
+    la      $a1, len1       # load address of 'len#'
+    lw      $a1, 0($a1)
+    jal     test            # call function
+
+    la      $a0, list2      # 1st parameter: address of list[0]
+    la      $a1, len2       # load address of 'len#'
+    lw      $a1, 0($a1)
+    jal     test            # call function
+
+    la      $a0, list3      # 1st parameter: address of list[0]
+    la      $a1, len3       # load address of 'len#'
+    lw      $a1, 0($a1)
+    jal     test            # call function
+
+    la      $a0, list4      # 1st parameter: address of list[0]
+    la      $a1, len4       # load address of 'len#'
+    lw      $a1, 0($a1)
+    jal     test            # call function
+
+    la      $a0, list5      # 1st parameter: address of list[0]
+    la      $a1, len5       # load address of 'len#'
+    lw      $a1, 0($a1)
+    jal     test            # call function
+
+return:	
+    li      $v0, 0          # Return value
+    lw      $ra, 0($sp)     # Restore return address
+    addi    $sp, $sp, 4    # Restore stack pointer
+    jr      $ra
+    
+    
+    
+    
