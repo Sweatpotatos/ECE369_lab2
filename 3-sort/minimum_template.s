@@ -116,7 +116,7 @@ loop_max:
     add     $t3,$t1,$0      # max_index=i
 next_max:
     addi    $t1,$t1,1       # i++
-    j       loop            # Loop back
+    j       loop_max:           # Loop back
 done_max: 
     add     $v0,$t3,$0      # return max_index
     jr      $ra
