@@ -36,11 +36,11 @@ loop:
     lb      $t0, str($t1)	# fetch a character in 'str'
 	beqz    $t0, strEnd	    # if a null character is fetched, exit the loop
 	bne     $t0, $t3, con   # branches to 'con' if registers $t0, and $t3 are not the same
-	add     $t2, $t2, 1	    # increment register $t2
+	addi     $t2, $t2, 1	    # increment register $t2
 
 con:	
 
-    add     $t1, $t1, 1	    # increase indexing register $t1
+    addi     $t1, $t1, 1	    # increase indexing register $t1
 	j       loop	       	# continues the loop
 
 strEnd:
