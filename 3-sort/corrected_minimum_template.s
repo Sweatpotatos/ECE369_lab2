@@ -1,7 +1,7 @@
 # Exercise 3
 # Max Score: 12 points
 #
-# Students: Yaolei Bian, Allen Leinberger, Muhammud
+# Students: Yaolei Bian, Allen Leinberger, Mohammed Alrkhayes
 #
 # minimum.s 
 # Finds the index of the smallest element in an integer array
