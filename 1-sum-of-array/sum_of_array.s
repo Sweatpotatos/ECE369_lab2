@@ -2,7 +2,7 @@
 # 'sum_of_array.s' - This program performs the sum of the array
 #  Max Score: 5 points
 #
-# Students: Students: Yaolei Bian, Allen Leinberger, Muhammud
+# Students: Students: Yaolei Bian, Allen Leinberger, Mohammed Alrkhayes
 #
 #
 # Insert your answers below each question:-
